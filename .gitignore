@@ -1,0 +1,12 @@
+
+# VS Code
+.vscode/*
+
+# Zola / SSGs
+public/*
+
+# Ignore dev stuff
+notes.md
+todo*.md
+
+.idea
