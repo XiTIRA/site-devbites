@@ -1,6 +1,6 @@
 +++
-title = "Introduction"
-description = ""
+title = "Books"
+description = "List of books to read"
 date = 2021-05-01T08:00:00+00:00
 updated = 2021-05-01T08:00:00+00:00
 draft = false
@@ -14,6 +14,4 @@ toc = true
 top = false
 +++
 
-## Quick Start
-
-Will be copying over some lists and links shortly
+None qute yet, coming soon!

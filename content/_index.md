@@ -28,7 +28,7 @@ weight = 20
 [[extra.menu.main]]
 name = "Resources"
 section = "resources"
-url = "/resources/getting-started/introduction"
+url = "/resources/introduction"
 weight = 30
 
 

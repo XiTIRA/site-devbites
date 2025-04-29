@@ -1,8 +1,8 @@
 +++
-title = "Getting Started"
+title = "External"
 description = ""
 template = "docs/section.html"
 sort_by = "weight"
-weight = 1
+weight = 20
 draft = false
 +++
