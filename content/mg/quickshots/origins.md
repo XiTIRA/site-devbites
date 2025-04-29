@@ -23,9 +23,9 @@ This excercise will be using the _MetalPanel.png_ asset from [Kenny UI Elements]
 
 Load this into the content tool, remembering to build afterward.
 
-![moon.png](metalPanel.png)
+![moon.png](../metalPanel.png)
 
-![bar.png](bar.png)
+![bar.png](../bar.png)
 
 
 ## Intro

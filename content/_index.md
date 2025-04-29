@@ -16,13 +16,13 @@ no_button = true
 [[extra.menu.main]]
 name = "C#"
 section = "csharp"
-url = "/csharp/getting-started/introduction/"
+url = "/csharp/introduction/"
 weight = 10
 
 [[extra.menu.main]]
 name = "MonoGame"
 section = "mg"
-url = "/mg/getting-started/introduction"
+url = "/mg/introduction"
 weight = 20
 
 [[extra.menu.main]]
