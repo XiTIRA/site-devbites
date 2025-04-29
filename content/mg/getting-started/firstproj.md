@@ -25,7 +25,7 @@ The below will create an empty desktop project supporting OpenGL.
 
 {{< tabs "installdeps" >}}
 {{< tab "VS Code / CLI" >}}
-```shell
+```bash
 dotnet new mgdekstopgl -o AwesomeGame
 cd AwesomeGame
 code .

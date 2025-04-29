@@ -24,7 +24,7 @@ any particular vendor.
 
 {{< tabs "installdeps" >}}
 {{< tab "Windows" >}}
-```shell
+```bash
 winget install Microsoft.DotNet.SDK.8
 ```
 {{< /tab >}}

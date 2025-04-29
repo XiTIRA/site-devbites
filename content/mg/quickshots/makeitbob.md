@@ -32,7 +32,7 @@ Just a nice simple bob action, handy for props or floaty things.
 Starting on the code, create some member properties on the Game1 class to store the texture and 
 three positions.
 
-```    cs    
+```c#
 // Add variables to store our texture and positions 
 // (We'll be drawing them three times)
 private Texture2D _texture;
@@ -43,7 +43,7 @@ private Vector2 _position3;
 
 In the `LoadContent(){}` function, load _moon.png_ into `_texture`.
 
-```cs
+```c#
     // Here we load the texture (moon.png) from the Content folder
     _texture = Content.Load<Texture2D>("moon");
 ```
@@ -52,7 +52,7 @@ Directly after this, we'll set the initial positions of our moon friend. There a
 to accomplish this, here we simply divide the screen width by 25%, 50% and 75% to spread three moons evenly 
 across the canvas. The height is 50% or the middle vertically.
 
-```csharp
+```c#
     // Nudge to the left (25% of the screen width)
     _position1 = new Vector2(_graphics.PreferredBackBufferWidth * .25f, _graphics.PreferredBackBufferHeight / 2.0f);
 
@@ -68,7 +68,7 @@ Going into the `Update()` method, we'll modify each of these positions in a slig
 For this one, we'll use a sine curve against the total game time - _not frame time_ - to give us an offset. Applynig
 this offset to the `Y` part of the position will make it bob up and down.
 
-```csharp
+```c#
     // Using a sine curve against the total game time results in a smooth transition
     float y1 = (float)Math.Sin(gameTime.TotalGameTime.TotalSeconds);
     _position1.Y += y1;
@@ -79,7 +79,7 @@ A visual representation of the `Sin()` calculation can be visualised like in the
 
 Straight after this, lets calculate the other two positions we'll end up using.
 
-```csharp
+```c#
     // Experiment with different curves to see what they look like
     float y2 = (float)Math.Cos(gameTime.TotalGameTime.TotalSeconds);
     _position2.Y += y2;
@@ -123,3 +123,7 @@ a moon prop in the background that doesn't move.
 
 An extension to this would be to save the offsets seperatly, keeping the original positions. 
 Doing so, an example use might be having a ghost bob as it moves towards a player.
+
+<video controls width="500">
+  <source src="../makeitbob.mp4" type="video/mp4" />
+</video>

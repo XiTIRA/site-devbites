@@ -30,7 +30,7 @@ Let's break down some of the starting boilerplate
 We're given two private variables here. These hold references to the GraphicsDeviceManager and the SpriteBatch objects. 
 These are required later on for handling various aspects of display and rendering. Keep them, they are friends.
 
-```csharp
+```c#
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 ```
@@ -40,7 +40,7 @@ The constructor for your game. Generally in here is where you would set up anyth
 For example, here we get a copy of the GraphicsDeviceManager, set the content folder and tell MonoGame to keep the
 mouse visible.
 
-```csharp
+```c#
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -56,7 +56,7 @@ that GraphicsDeviceManager and some other internals are guaranteed to be availab
 
 _Note it is only called once_
 
-```csharp
+```c#
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
@@ -72,7 +72,7 @@ original position for player in here.
 
 _Note it is only called once_
 
-```csharp
+```c#
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -86,7 +86,7 @@ _Most of the magic really does happen in here_
 
 Updates x times a second. This would be considered the traditional game loop idea. This is where you would check for inputs, check collisions, move sprites around etc.
 
-```csharp
+```c#
     protected override void Update(GameTime gameTime)
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -103,7 +103,7 @@ _And this makes all that juicy magic visible_
 
 Updates x times a second. This is where everything is drawn to the display. Generally speaking logic should not be placed in here and handle only enough code to actually draw to the screen.
 
-```csharp
+```c#
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.CornflowerBlue);

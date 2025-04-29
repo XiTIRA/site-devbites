@@ -42,7 +42,7 @@ sprite animation stores multiple frames in a single image, but we'll get to that
 
 In our game class, start by creating some private members. These will be used in the update and draw loops later.
 
-```csharp
+```c#
     // Stores original textures for the animation
     private List<Texture2D> _animIndividualFrames = new List<Texture2D>();
 
@@ -61,7 +61,7 @@ In our game class, start by creating some private members. These will be used in
 In `LoadContent()` we'll grab the screen width and height. Strictly not necessary but for this document makes positioning
 the sprites easier.
 
-```csharp
+```c#
         // Grab the screen width to help with positioning
         int screenWidth = _graphics.PreferredBackBufferWidth;
         int yPos = _graphics.PreferredBackBufferHeight / 2;
@@ -70,7 +70,7 @@ the sprites easier.
 From here, load the Up and Down images into respective variables and add them to the animation frames list. Lists are in 
 the order we load them, so frame 1 would be 'Down' and so on.
 
-```csharp
+```c#
         // Read in our frame textures. We save them in a list, so a local variable is fine.
         Texture2D frogDown = Content.Load<Texture2D>("Down");
         Texture2D frogUp = Content.Load<Texture2D>("Up");
@@ -82,7 +82,7 @@ the order we load them, so frame 1 would be 'Down' and so on.
 
 Set the initial position of the animation so that we can see it nicely on the screen. Note `* .25` here is effectively 
 1/4 th of the total screen width. Ie, `new Vector2(middle left x, center y)`.
-```csharp
+```c#
         // And give it a position
         _animationPosition = new Vector2((float)(screenWidth * .25), yPos);
 ```
@@ -91,7 +91,7 @@ The first frame of the animation needs to be set before we start updates and dra
 be thrown because it can't load a null texture. This does not make a copy of the texture, just copies the reference to it.
 
 Also set the current frame or index here. 
-```csharp
+```c#
         // Then we need to set the first frame
         _currentTexture = frogUp;
         _currentFrame = 0;
@@ -100,7 +100,7 @@ Also set the current frame or index here.
 Create a method `FlipBookAnimationSeperateTextures` so that we can keep the update loop a bit cleaner. Use the code below,
 taking note how we use the length of the animation frame list to work out when to cycle back to the first image. This way,
 extending the image only requires adding new frames and not adjusting hard set frame counts.
-```csharp
+```c#
     private void FlipBookAnimationSeperateTextures(GameTime gameTime)
     {
         // Reduce the frame timer by the elapsed number of seconds.
@@ -130,7 +130,7 @@ Now going back to the update method of the game class, updating the animation ti
 
 Jump over to the games `Draw()` method. Start a sprite batch, draw the `_currentTexture` and close the sprite batch'
 
-```csharp
+```c#
         // Always start a sprite batch with SpriteBatch.Begin()
         _spriteBatch.Begin();
 
