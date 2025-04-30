@@ -76,7 +76,7 @@ Ensure you select the below workloads during installation.
 
 If you did not install .NET 8 sdk previously make sure it's selected in the 'Individual components' tab.
 
-![Workloads.png](Workloads.png)
+![Workloads.png](../workloads.png)
 
 ### Visual Studio Code
 

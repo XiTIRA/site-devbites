@@ -14,9 +14,9 @@ no_button = true
 
 # Menu items
 [[extra.menu.main]]
-name = "C#"
-section = "csharp"
-url = "/csharp/introduction/"
+name = "Coding"
+section = "coding"
+url = "/coding/introduction/"
 weight = 10
 
 [[extra.menu.main]]
