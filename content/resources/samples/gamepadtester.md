@@ -17,3 +17,5 @@ top = false
 Gamepad Tester MG is made publically available to view and run.
 
 It has also been published to the Play Store.
+
+[Xitira/GamePadTester](https://github.com/XiTIRA/GamePadTester)

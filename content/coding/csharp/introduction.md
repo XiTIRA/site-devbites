@@ -16,6 +16,7 @@ top = false
 
 ## Coming Soon
 
-Some random programming bits will be coming here in due time
+Need to compose some c sharp stuff in here.
+
 
 
