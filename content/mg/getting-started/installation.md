@@ -22,27 +22,28 @@ any particular vendor.
 
 ## .NET
 
-{{< tabs "installdeps" >}}
-{{< tab "Windows" >}}
+
+{% tabs(tabs=["Windows","Ububtu","MacOS","Direct Download"],group="installdeps") %}
+{% tab() %}
 ```bash
 winget install Microsoft.DotNet.SDK.8
 ```
-{{< /tab >}}
-{{< tab "Ubuntu" >}}
+{% end %}
+{% tab() %}
 ```bash
 sudo apt-get update
 sudo apt-get install -y dotnet-sdk-8.0
 ```
-{{< /tab >}}
-{{< tab "MacOS" >}}
+{% end %}
+{% tab() %}
 ```bash
 tba
 ```
-{{< /tab >}}
-{{< tab "Direct Download" >}}
+{% end %}
+{% tab() %}
 - [.NET SDKs Download](https://dotnet.microsoft.com/en-us/download/visual-studio-sdksw)
-{{< /tab >}}
-{{< /tabs >}}
+{% end %}
+{% end %}
 
 ## MonoGame Project Templates
 
@@ -84,14 +85,12 @@ WIndows, Linux and MacOs.
 
 
 
-{{< tabs "installvscode" >}}
-
-{{< tab "Download" >}}
-
+{% tabs(tabs=["Download","Extensions"],group="installvscode") %}
+{% tab() %}
 - [Download Visual Studio Code](https://code.visualstudio.com/download)
 
-{{< /tab >}}
-{{< tab "Extensions" >}}
+{% end %}
+{% tab() %}
 
 ```bash
 code --install-extension ms-dotnettools.csharp
@@ -99,8 +98,8 @@ code --install-extension ms-dotnettools.csdevkit
 code --install-extension ms-dotnettools.dotnet-maui
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{% end %}
+{% end %}
 
 ### Jetbrains Rider
 
