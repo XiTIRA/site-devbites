@@ -28,13 +28,15 @@ Tab 2 content
 ```
 
 {% tabs(tabs=["tabs.html","tab.html","_tabs.scss"],group="tabs") %}
+
 {% tab() %}
+
 ```html
 <div class="tab-wrap">
 
     {% for tab in tabs %}
 
-    <input type="radio" id="tab-{{tab}}{{group}}" name="{{group}}" class="tab" checked>
+    <input type="radio" id="tab-{{tab}}{{group}}" name="{{group}}" class="tab" {% if tab == tabs[0] %}checked{% endif %}>
     <label for="tab-{{tab}}{{group}}">{{tab}}</label>
 
     {% endfor %}
